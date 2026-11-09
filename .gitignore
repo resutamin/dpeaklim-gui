@@ -1,0 +1,28 @@
+# ---- build artifacts ----
+obj/
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.res
+*.tlog
+*.idb
+
+# built binaries (distribute via GitHub Releases instead of committing)
+bin/dpeaklim_gui.exe
+bin/dpeaklim_setup.exe
+setup/obj/
+
+# ---- never commit: Microsoft system files / analysis dumps ----
+# audioeng.dll is a Windows system file (Microsoft copyright). Do NOT redistribute.
+audioeng.dll
+*.i64
+*.dmp
+*.wer
+
+# ---- misc ----
+*.zip
+Thumbs.db
+desktop.ini
+.vs/

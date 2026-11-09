@@ -1,0 +1,37 @@
+THIRD-PARTY NOTICES
+===================================================================
+
+This project builds on and/or bundles the following third-party components.
+
+-------------------------------------------------------------------
+1. dpeaklim  (original command-line tool)
+-------------------------------------------------------------------
+   Author : Suguru Kawamoto
+   License: MIT (see LICENSE)
+   The files src/dpeaklim.cpp, src/InpOut32.cpp, src/InpOut32.h,
+   src/stdafx.*, src/targetver.h are the author's original source
+   (comments re-encoded to UTF-8; the CLI main() is disabled behind
+   DPEAKLIM_BUILD_CLI; the physical-memory scan loop in ApplyPatch was
+   wrapped in SEH to skip unreadable pages). All other logic is unchanged.
+
+-------------------------------------------------------------------
+2. InpOut32 / inpoutx64  (kernel driver for port / physical memory I/O)
+-------------------------------------------------------------------
+   Original: Logix4U (www.logix4u.net)
+   x64 port & signing: Phillip Gibbons / Highresolution Enterprises
+                       (http://www.highrez.co.uk/Downloads/InpOut32)
+   See InpOut32.txt for the authors' own notice.
+
+   IMPORTANT: InpOut32 is third-party freeware and is NOT distributed
+   under the MIT license. The binaries inpoutx64.dll / inpoutx64.sys /
+   inpout32.dll / inpout32.sys are copyright their respective owners.
+   If you are unsure about redistribution, do NOT commit these binaries
+   to your repository — instead link users to the official download
+   above and have them place the files into the bin/ folder themselves.
+
+-------------------------------------------------------------------
+3. Windows Audio Engine  (audioeng.dll)
+-------------------------------------------------------------------
+   audioeng.dll is a Microsoft Windows system file. It is NOT included
+   in this repository and must never be redistributed. The tool only
+   reads the copy already present on the user's own system at runtime.

@@ -1,0 +1,6 @@
+#include <windows.h>
+
+// 本体とドライバを埋め込む（..\bin から）
+101 RCDATA "..\\bin\\dpeaklim_gui.exe"
+102 RCDATA "..\\bin\\inpoutx64.dll"
+103 RCDATA "..\\bin\\inpoutx64.sys"
